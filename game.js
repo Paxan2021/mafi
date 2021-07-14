@@ -108,44 +108,44 @@ export async function closeWriteChat(ctx) {
 async function creatingRoles(chatID, counter) {
     let masRoles, counterWorld = 0, counterMafia = 2, counterTriada = 0;
     if (counter <5) {
-        masRoles = ['Cin', 'Həkim', 'Uğurlu']; //2
+        masRoles = ['Cin', 'Həkim', 'Bedbext']; //2
         counterWorld = 2;
         counterMafia = 1;
     } else if (counter <7) {
-        masRoles = ['Cin', 'Həkim', 'Komissar', 'Uğurlu'];//2
+        masRoles = ['Cin', 'Həkim', 'Komissar', 'Bedbext'];//2
         counterWorld = 3;
     } else if (counter <9) {
-        masRoles = ['Cin', 'Ruh', 'Həkim', 'Komissar', 'Uğurlu', 'Kamikadze'];//3
+        masRoles = ['Cin', 'Ruh', 'Həkim', 'Komissar', 'Bedbext', 'Kamikadze'];//3
         counterWorld = 4;
     } else if (counter <10) {
         masRoles = [
-            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Uğurlu', 'Kamikadze', 
+            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Bedbext', 'Kamikadze', 
             'Mühafizəçi', 'Manyak'
         ];//2
         counterWorld = 6;
     } else if (counter <11) {
         masRoles = [
-            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Uğurlu', 'Kamikadze', 
+            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Bedbext', 'Kamikadze', 
             'Mühafizəçi', 'Manyak', 'Məşuqə'
         ];//2
         counterWorld = 7;
     } else if (counter <13) {
         masRoles = [
-            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Leytenant', 'Uğurlu', 
-            'Kamikadze', 'Mühafizəçi', 'Manyak', 'Iblis', 'Məşuqə'
+            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Leytenant', 'Bedbext', 
+            'Kamikadze', 'Mühafizəçi', 'Manyak', 'Məşuqə'
         ];//3
         counterWorld = 8;
     } else if (counter <15) {
         masRoles = [
-            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Leytenant', 'Uğurlu', 
-            'Kamikadze', 'Mühafizəçi', 'Manyak', 'Iblis', 'Məşuqə', 'Zombi'
+            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Leytenant', 'Bedbext', 
+            'Kamikadze', 'Mühafizəçi', 'Manyak', 'Manyak', 'Zombi'
         ];//4
         counterWorld = 8;
         counterTriada = 1;
     } else if (counter <19) {
         masRoles = [
-            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Leytenant', 'Uğurlu', 
-            'Kamikadze', 'Mühafizəçi', 'Manyak', 'Iblis', 'Məşuqə', 'Zombi', 'Dəli'
+            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Leytenant', 'Bedbext', 
+            'Kamikadze', 'Mühafizəçi', 'Manyak', 'Məşuqə', 'Zombi', 'Dəli'
         ];//7
         counterWorld = 8;
         counterTriada = 2;
@@ -171,8 +171,6 @@ function distributionOfRoles(ChatID, masRoles, masPlayers) {
             allies = 2;
         } else if (masRoles[i] == 'Zombi' || masRoles[i] == 'Dəli') {
             allies = 3;
-        } else if (masRoles[i] == 'Manyak' || masRoles[i] == 'Iblis') {
-            allies = 4;
         }
         dq.addRolePlayer(ChatID, item.userID, masRoles[i], allies);
     });
@@ -293,10 +291,6 @@ async function sendMessageAboutProgressRole(ChatID, userID, actUserID) {
             textMessage = '🔪 <b>Manyak</b> kimisə bıçaqladı...';
             textMessageUser = `Sənin seçimin<a href="tg://user?id=${userAct.players[0].userID}">${userAct.players[0].name}</a>`;
             break;
-        case 'Iblis':
-                textMessage = '🔪 <b>Iblis</b> ureydi...';
-                textMessageUser = `Sənin seçimin<a href="tg://user?id=${userAct.players[0].userID}">${userAct.players[0].name}</a>`;
-             break;
         case 'Məşuqə':
             textMessage = '💃🏻 <b>Məşuqə</b> kiminsə qonağı oldu...';
             textMessageUser = `Sənin seçimin<a href="tg://user?id=${userAct.players[0].userID}">${userAct.players[0].name}</a>`;
@@ -505,8 +499,8 @@ function createTextMessageRoles(role) {
         case 'Leytenant':
             textMessage = 'Rolun - 👮🏻 <b>Leytenant</b>.\nKomissar köməkçisi, rəis öldükdə rütbə alır və komissar olur';
             break;
-        case 'Uğurlu':
-            textMessage = 'Rolun - 🤞 <b>Uğurlu insan</b>.\nÖlüm zamanı şanslı olar və ölməz.';
+        case 'Bedbext':
+            textMessage = 'Rolun - 🤞 <b>Bedbext insan</b>.\nmafia basqasini vurduqda gulle sənə dəyər və ölərsen.';
             break;
         case 'Kamikadze':
             textMessage = 'Rolun - 🤦🏼‍♂️ <b>Kamikadze</b>.\nintiharçıdır, məqsədi günortadan sonra iclasda asılmaqdır :)';
@@ -516,9 +510,6 @@ function createTextMessageRoles(role) {
             break;
         case 'Manyak':
             textMessage = 'Rolun - 🔪 <b>Manyak</b>.\nTəkbaşına mafiya ilə mübarizə aparmaq istəyir, istənilən insanı öldürə bilər...';
-            break;
-        case 'Iblis':
-                textMessage = 'Rolun - 🔪 <b>Iblis</b>.\Manyak ile birge mafiyaya qarsi mübarizə aparmaq istəyir, istənilən insanı öldürə bilər...';
             break;
         case 'Məşuqə':
             textMessage = 'Rolun - 💃🏻 <b>Məşuqə</b>.\nGecələr oyunçunun diqqətini yayındırır və hərəkət etmək fürsətini itirir...';
@@ -539,7 +530,6 @@ async function createTextMessageAction(role, userID, ChatID) {
     switch(role) {
         case 'Cin':
         case 'Manyak':
-        case 'Iblis':
         case 'Zombi':
             textMessage = 'Bu gecə kimi öldürəcəyik?';
             break;
@@ -756,12 +746,12 @@ async function ProcessingResultsNight(data, ChatID) {
         cloneData.players.forEach((player, i) => {
             if (!player.lifeStatus && data.players[i].lifeStatus) {
                 kill += 1;
-                if (player.initialRole == 'Uğurlu'){
+                if (player.initialRole == 'Bedbext'){
                     if (Math.random() > 0.65){
                         cloneData.players[i].lifeStatus = true;
                         cloneData = updateCounter(cloneData, i, false);
-                        kill -= 1;
-                        Lucky = true;
+                        kill -= 0;
+                        Lucky = false;
                         app.bot.telegram.sendMessage(
                             ChatID,
                             `Bu axşam insanlardan bəzilərinə qismət oldu...`);
@@ -974,9 +964,6 @@ async function sendDayMessageLivePlayers(ChatID, data) {
                 case 'Dəli':
                     masRole[12]=1;
                     break;
-                case 'Iblis':
-                        masRole[13]=1;
-                    break;
             }
         }
     });
@@ -997,7 +984,6 @@ async function sendDayMessageLivePlayers(ChatID, data) {
     if (masRole[10]==1) { listRoles+=`💃🏻 Məşuqə, `; }
     if (masRole[11]==1) { listRoles+=`🧟‍♀ Zombi, `; }
     if (masRole[12]==1) { listRoles+=`🧘🏻 Dəli, `; }
-    if (masRole[13]==1) { listRoles+=`🔪 Iblis, `; }
     await app.bot.telegram.sendMessage(
         ChatID,
         `<b>🔥Sağ qalan oyunçular:</b>`+listUsers+`\n\n<b>Onlardan:</b>`+listRoles.slice(0, -2)+
