@@ -750,7 +750,7 @@ async function ProcessingResultsNight(data, ChatID) {
                     if (Math.random() > 0.65){
                         cloneData.players[i].lifeStatus = true;
                         cloneData = updateCounter(cloneData, i, false);
-                        kill -= 0;
+                        kill -= 3;
                         Lucky = false;
                         app.bot.telegram.sendMessage(
                             ChatID,
@@ -943,7 +943,7 @@ async function sendDayMessageLivePlayers(ChatID, data) {
                 case 'Leytenant':
                     masRole[5]=1;
                     break;
-                case 'Uğurlu':
+                case 'Bedbext':
                     masRole[6]=1;
                     break;
                 case 'Kamikadze':
@@ -977,7 +977,7 @@ async function sendDayMessageLivePlayers(ChatID, data) {
     if (masRole[3]==1) { listRoles+=`👨🏼‍⚕️ Həkim, `; }
     if (masRole[4]==1) { listRoles+=`🕵🏼️‍♂️ Komissar, `; }
     if (masRole[5]==1) { listRoles+=`👮🏻 Leytenant, `; }
-    if (masRole[6]==1) { listRoles+=`👼 Uğurlu, `; }
+    if (masRole[6]==1) { listRoles+=`👼 Bedbext, `; }
     if (masRole[7]==1) { listRoles+=`🤦🏼‍♂️ Kamikadze, `; }
     if (masRole[8]==1) { listRoles+=`✊ Mühafizəçi, `; }
     if (masRole[9]==1) { listRoles+=`🔪 Manyak, `; }
