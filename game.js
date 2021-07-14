@@ -284,7 +284,7 @@ async function sendMessageAboutProgressRole(ChatID, userID, actUserID) {
             }
             break;
         case 'Mühafizəçi':
-            textMessage = '✊ <b>Mühafizəçi</b> öz həyatını təhlükəyə atdı..';
+            textMessage = '✊ <b>Mühafizəçi</b> öz həyatını təhlükəyə atdı...';
             textMessageUser = `Sənin seçimin <a href="tg://user?id=${userAct.players[0].userID}">${userAct.players[0].name}</a>`;
             break;
         case 'Manyak':
