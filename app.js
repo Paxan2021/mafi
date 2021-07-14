@@ -66,7 +66,7 @@ bot.command('game', async (ctx) => {
 bot.command('role', (ctx) => {
   ctx.reply(`Oyunda aşağıdakı rollar mövcuddur:
 👨🏼 <b>İnsan</b> - əsas məqsədi gecə düşməmiş cin və ruhları müəyyən etmək və onları səs verməylə oyundan kənarlaşdırmaqdır.
-🤞 <b>Uğurlu insan</b> - ölüm zamanı şanslı olar və ölməz.
+🤞 <b>Bedbext</b> - mafia basqasini vurduqda gulle bedbexte dəyər və ölər.
 👹 <b>Cin</b> - cəhənnəmin başçısıdır hər gecə bir nəfəri öldürür
 👺 <b>Ruh</b> - cinin köməkçisidir gün ərzində oyunçuları səslərindən məhrum edir, Cin ölərsə cəhənnəmin başçısı olur
 👨🏼‍⚕️ <b>Həkim</b> - sakinləri yaxşılaşdırır, ancaq ardıcıl 2 dəfə bir oyunçunu sağaldırsa və bir dəfəyə vurulmayıbsa, onu ölümünə qədər sağaldır.
@@ -75,7 +75,6 @@ bot.command('role', (ctx) => {
 🤦🏼‍♂️ <b>Kamikadze</b> - intiharçıdır, məqsədi günortadan sonra iclasda asılmaqdır
 ✊ <b>Mühafizəçi</b> - işdən tez ayrıldıqda istənilən oyunçunu əhatə edir, ancaq oyunçunu ölümdən qurtarır.
 🔪 <b>Manyak</b> - təkbaşına cinlərlə mübarizə aparmaq istəyir, istənilən sakini öldürə bilər
-♨️ <b>Iblis</b> - manyakin bratvasi
 💃🏻 <b>Məşuqə</b> - gecələr oyunçunun diqqətini yayındırır və hərəkət etmək fürsətini itirir
 🧟‍♀ <b>Zombi</b> - məqsədi cin və mülki şəxsləri öldürmək olan şəhərdəki 2 cinayətkar ailənin başçısıdır.
 🧘🏻 <b>Dəli</b> - zombinin köməkçisi, oyunçunu komissar və ya mafiya rolunun olub olmadığını yoxlayır, zombi öldükdə yerini alır.
