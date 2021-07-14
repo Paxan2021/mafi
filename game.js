@@ -750,7 +750,7 @@ async function ProcessingResultsNight(data, ChatID) {
                     if (Math.random() > 0.65){
                         cloneData.players[i].lifeStatus = true;
                         cloneData = updateCounter(cloneData, i, false);
-                        kill -= 99;
+                        kill -= 3;
                         Lucky = false;
                         app.bot.telegram.sendMessage(
                             ChatID,
