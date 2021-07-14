@@ -745,13 +745,13 @@ async function ProcessingResultsNight(data, ChatID) {
         //Отправляем в чат информацию, если кого-то убили
         cloneData.players.forEach((player, i) => {
             if (!player.lifeStatus && data.players[i].lifeStatus) {
-                kill += 9;
+                kill += 1;
                 if (player.initialRole == 'Ölümsüz'){
                     if (Math.random() > 0.65){
                         cloneData.players[i].lifeStatus = true;
                         cloneData = updateCounter(cloneData, i, false);
-                        kill -= 2;
-                        Lucky = false;
+                        kill -= 3;
+                        Lucky = true;
                         app.bot.telegram.sendMessage(
                             ChatID,
                             `Bu axşam insanlardan bəzilərinə qismət oldu...`);
