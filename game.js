@@ -751,7 +751,7 @@ async function ProcessingResultsNight(data, ChatID) {
                         cloneData.players[i].lifeStatus = true;
                         cloneData = updateCounter(cloneData, i, false);
                         kill -= 3;
-                        Lucky = true;
+                        Lucky = false;
                         app.bot.telegram.sendMessage(
                             ChatID,
                             `Bu axşam insanlardan bəzilərinə qismət oldu...`);
