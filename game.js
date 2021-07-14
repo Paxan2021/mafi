@@ -515,7 +515,7 @@ function createTextMessageRoles(role) {
             textMessage = 'Rolun - 💃🏻 <b>Məşuqə</b>.\nGecələr oyunçunun diqqətini yayındırır və hərəkət etmək fürsətini itirir...';
             break;
         case 'Zombi':
-            textMessage = 'Rolun - 🧟‍♀ <b>Zombi</b>.\nMəqsədi mafiya və mülki şəxsləri öldürmək olan şəhərdəki 2 cinayətkar ailənin başçısıdır...';
+            textMessage = 'Rolun - 🧟‍♀ <b>Zombi</b>.\nMəqsədi mafiya və mülki şəxsləri öldürmək olan şəhərdəki 2 cinayətkar ailənin başçısıdır....';
             break;
         case 'Dəli':
             textMessage = 'Rolun - 🤡 <b>Dəli</b>.\nzZombinin köməkçisi, oyunçunu komissar və ya mafiya rolunun olub olmadığını yoxlayır, zombi öldükdə yerini alır...';
