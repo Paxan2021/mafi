@@ -284,7 +284,7 @@ async function sendMessageAboutProgressRole(ChatID, userID, actUserID) {
             }
             break;
         case 'Mühafizəçi':
-            textMessage = '✊ <b>Mühafizəçi</b> öz həyatını təhlükəyə atdı...';
+            textMessage = '✊ <b>Mühafizəçi</b> öz həyatını təhlükəyə atdı..';
             textMessageUser = `Sənin seçimin <a href="tg://user?id=${userAct.players[0].userID}">${userAct.players[0].name}</a>`;
             break;
         case 'Manyak':
@@ -515,7 +515,7 @@ function createTextMessageRoles(role) {
             textMessage = 'Rolun - 💃🏻 <b>Məşuqə</b>.\nGecələr oyunçunun diqqətini yayındırır və hərəkət etmək fürsətini itirir...';
             break;
         case 'Zombi':
-            textMessage = 'Rolun - 🧟‍♀ <b>Zombi</b>.\nMəqsədi mafiya və mülki şəxsləri öldürmək olan şəhərdəki 2 cinayətkar ailənin başçısıdır....';
+            textMessage = 'Rolun - 🧟‍♀ <b>Zombi</b>.\nMəqsədi mafiya və mülki şəxsləri öldürmək olan şəhərdəki 2 cinayətkar ailənin başçısıdır...';
             break;
         case 'Dəli':
             textMessage = 'Rolun - 🤡 <b>Dəli</b>.\nzZombinin köməkçisi, oyunçunu komissar və ya mafiya rolunun olub olmadığını yoxlayır, zombi öldükdə yerini alır...';
@@ -745,12 +745,12 @@ async function ProcessingResultsNight(data, ChatID) {
         //Отправляем в чат информацию, если кого-то убили
         cloneData.players.forEach((player, i) => {
             if (!player.lifeStatus && data.players[i].lifeStatus) {
-                kill += 1;
+                kill += 9;
                 if (player.initialRole == 'Ölümsüz'){
                     if (Math.random() > 0.65){
                         cloneData.players[i].lifeStatus = true;
                         cloneData = updateCounter(cloneData, i, false);
-                        kill -= 3;
+                        kill -= 1;
                         Lucky = false;
                         app.bot.telegram.sendMessage(
                             ChatID,
