@@ -87,7 +87,7 @@ bot.command('role', (ctx) => {
 🔮 <b>Cadugər</b> - Cadugər gecələr oyunçunun diqqətini yayındırır və hərəkət etmək fürsətini itirir...
 🧟‍♀ <b>Zombi</b> - məqsədi cin və mülki şəxsləri öldürmək olan şəhərdəki 2 cinayətkar ailənin başçısıdır.
 🧘🏻 <b>Dəli</b> - zombinin köməkçisi, oyunçunu komissar və ya mafiya rolunun olub olmadığını yoxlayır, zombi öldükdə yerini alır.
-<b>RoBotlarimTg</b> ☑️`, {parse_mode: 'HTML'});
+<b>Fariz Hesenov</b> ☑️`, {parse_mode: 'HTML'});
 });
 
 //Очищаем данные игры
