@@ -74,7 +74,7 @@ bot.command('role', (ctx) => {
   ctx.reply(`Oyunda aşağıdakı rollar mövcuddur:
 👨🏼 <b>İnsan</b> - əsas məqsədi gecə düşməmiş cin və ruhları müəyyən etmək və onları səs verməylə oyundan kənarlaşdırmaqdır.
 🕺 <b>Ölümsüz</b> - Gecələr vurulduqda ölməz, ancaq gündüz səs vermədə ölə bilir.
-👹 <b>Cin</b> - cəhənnəmin başçısıdır hər gecə bir nəfəri öldürür
+👹 <b>Cin</b> - cəhənnəmin başçısıdır hər gecə bir nəfəri öldürür.
 👺 <b>Ruh</b> - cinin köməkçisidir gün ərzində oyunçuları səslərindən məhrum edir, Cin ölərsə cəhənnəmin başçısı olur
 👨🏼‍⚕️ <b>Həkim</b> - sakinləri yaxşılaşdırır, ancaq ardıcıl 2 dəfə bir oyunçunu sağaldırsa və bir dəfəyə vurulmayıbsa, onu ölümünə qədər sağaldır.
 🕵🏼️‍♂️ <b>Komissar</b> - İnsanların başçısı, Cin və Ruhu axtarır, oyunçunu yoxlaya və ya öldürə bilər
