@@ -489,7 +489,7 @@ async function sendRoleMessage(ChatID) {
 
 //Формируем текст сообщения с описанием роли
 function createTextMessageRoles(role) {
-    let textMessage = 'Siz əgər bu mesajı görürsünüzsə zəhmət olmasa onu @aykhan_s -ə yönləndirin';
+    let textMessage = 'Siz əgər bu mesajı görürsünüzsə zəhmət olmasa onu @fariz_hesenof -a yönləndirin';
     switch(role) {
         case 'İnsan':
             textMessage = 'Rolun - 👨🏼 <b>İnsan</b>.\nƏsas məqsədi gecə düşməmiş cin və ruhu müəyyən etmək və onları səs verməylə oyundan kənarlaşdırmaqdır';
