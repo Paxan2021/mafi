@@ -62,6 +62,11 @@ bot.command('game', async (ctx) => {
   }
 });
 
+
+bot.command('/startgame', (ctx) => {
+  game.launch(ctx.message.chat.id);
+});
+
 //Запускаем игру
 bot.command('role', (ctx) => {
   ctx.reply(`Oyunda aşağıdakı rollar mövcuddur:
