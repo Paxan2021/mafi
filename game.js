@@ -286,7 +286,7 @@ async function sendMessageAboutProgressRole(ChatID, userID, actUserID) {
             }
             break;
         case 'Ekizler-1':
-            if (user.players[0].copCheck){
+            if (user.players[0].copKill){
                 textMessage = '🕵🏼️‍♂️ <b>Ekizler-1</b> cini axtarmağa getdi...';
                 textMessageUser = `Sənin seçimin <a href="tg://user?id=${userAct.players[0].userID}">${userAct.players[0].name}</a>`;
             } else {
@@ -628,7 +628,7 @@ async function ProcessingResultsNight(data, ChatID) {
     data.players.forEach((player, i) => {
         if ((player.lifeStatus && player.role == 'Cin' && player.actID != 0)||
             (player.lifeStatus && player.role == 'Komissar' && player.actID != 0 && !player.copCheck)||
-            (player.lifeStatus && player.role == 'Ekizler-1' && player.actID != 0 && !player.copCheck)||
+            (player.lifeStatus && player.role == 'Ekizler-1' && player.actID != 0 && !player.copKill)||
             (player.lifeStatus && player.role == 'Мanyak' && player.actID != 0)||
             (player.lifeStatus && player.role == 'Zombi' && player.actID != 0)) {
 
@@ -648,7 +648,7 @@ async function ProcessingResultsNight(data, ChatID) {
                 }
             });
         } else if ((player.lifeStatus && player.role == 'Komissar' && player.actID != 0 && player.copCheck)||
-                   (player.lifeStatus && player.role == 'Ekizler-1' && player.actID != 0 && player.copCheck)||
+                   (player.lifeStatus && player.role == 'Ekizler-1' && player.actID != 0 && player.copKill)||
                    (player.lifeStatus && player.role == 'Dəli' && player.actID != 0)||
                    (player.lifeStatus && player.role == 'Ruh' && player.actID != 0)) {
             const actID = player.actID,
@@ -1288,4 +1288,3 @@ export async function callbackQuery(ctx) {
         );
     }
   }
-
