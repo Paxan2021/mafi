@@ -112,39 +112,39 @@ async function creatingRoles(chatID, counter) {
         counterWorld = 2;
         counterMafia = 1;
     } else if (counter <7) {
-        masRoles = ['Cin', 'Həkim', 'Komissar', 'Ölümsüz'];//2
+        masRoles = ['Cin', 'Həkim', 'Komissar', 'Ölümsüz', 'Ekizler-1'];//2
         counterWorld = 3;
     } else if (counter <9) {
-        masRoles = ['Cin', 'Ruh', 'Həkim', 'Komissar', 'Ölümsüz', 'Kamikadze'];//3
+        masRoles = ['Cin', 'Ruh', 'Həkim', 'Komissar', 'Ekizler-1', 'Ölümsüz', 'Kamikadze'];//3
         counterWorld = 4;
     } else if (counter <10) {
         masRoles = [
-            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Ölümsüz', 'Kamikadze', 
+            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Ekizler-1', 'Ölümsüz', 'Kamikadze', 
             'Mühafizəçi', 'Manyak'
         ];//2
         counterWorld = 6;
     } else if (counter <11) {
         masRoles = [
-            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Ölümsüz', 'Kamikadze', 
+            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Ekizler-1', 'Ölümsüz', 'Kamikadze', 
             'Mühafizəçi', 'Manyak', 'Məşuqə'
         ];//2
         counterWorld = 7;
     } else if (counter <13) {
         masRoles = [
-            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Leytenant', 'Ölümsüz', 
+            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Leytenant', 'Ekizler-1', 'Ekizler-2', 'Ölümsüz', 
             'Kamikadze', 'Mühafizəçi', 'Manyak', 'Məşuqə'
         ];//3
         counterWorld = 8;
     } else if (counter <15) {
         masRoles = [
-            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Leytenant', 'Ölümsüz', 
+            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Leytenant', 'Ekizler-1', 'Ekizler-2', 'Ölümsüz', 
             'Kamikadze', 'Mühafizəçi', 'Manyak', 'Manyak', 'Zombi'
         ];//4
         counterWorld = 8;
         counterTriada = 1;
     } else if (counter <19) {
         masRoles = [
-            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Leytenant', 'Ölümsüz', 
+            'Cin', 'Ruh', 'Həkim', 'Komissar', 'Leytenant', 'Ekizler-1', 'Ekizler-2', 'Ölümsüz', 
             'Kamikadze', 'Mühafizəçi', 'Manyak', 'Məşuqə', 'Zombi', 'Dəli'
         ];//7
         counterWorld = 8;
@@ -171,7 +171,8 @@ function distributionOfRoles(ChatID, masRoles, masPlayers) {
             allies = 2;
         } else if (masRoles[i] == 'Zombi' || masRoles[i] == 'Dəli') {
             allies = 3;
-        }
+        } else if (masRoles[i] == 'Ekizler-1' || masRoles[i] == 'Ekizler-2') {
+            allies = 4;
         dq.addRolePlayer(ChatID, item.userID, masRoles[i], allies);
     });
 }
@@ -280,6 +281,15 @@ async function sendMessageAboutProgressRole(ChatID, userID, actUserID) {
                 textMessageUser = `Sənin seçimin <a href="tg://user?id=${userAct.players[0].userID}">${userAct.players[0].name}</a>`;
             } else {
                 textMessage = '🕵🏼️‍♂️ <b>Komissar</b> silahını bir nəfərə tutdu...';
+                textMessageUser = `Sənin seçimin<a href="tg://user?id=${userAct.players[0].userID}">${userAct.players[0].name}</a>`;
+            }
+            break;
+        case 'Ekizler-1':
+            if (user.players[0].copCheck){
+                textMessage = '🕵🏼️‍♂️ <b>Ekizler-1</b> cini axtarmağa getdi...';
+                textMessageUser = `Sənin seçimin <a href="tg://user?id=${userAct.players[0].userID}">${userAct.players[0].name}</a>`;
+            } else {
+                textMessage = '🕵🏼️‍♂️ <b>Ekizler-1</b> silahını bir nəfərə tutdu...';
                 textMessageUser = `Sənin seçimin<a href="tg://user?id=${userAct.players[0].userID}">${userAct.players[0].name}</a>`;
             }
             break;
@@ -499,6 +509,12 @@ function createTextMessageRoles(role) {
         case 'Leytenant':
             textMessage = 'Rolun - 👮🏻 <b>Leytenant</b>.\nKomissar köməkçisi, rəis öldükdə rütbə alır və komissar olur';
             break;
+        case 'Ekizler-1':
+            textMessage = 'Rolun - 🕵🏼️‍♂️ <b>Ekizler-1</b>.\nİnsanların başçısı, Cin və Ruhu axtarır, oyunçunu yoxlaya və ya öldürə bilər...';
+            break;
+        case 'Ekizler-2':
+            textMessage = 'Rolun - 👮🏻 <b>Ekizler-2</b>.\nKomissar köməkçisi, rəis öldükdə rütbə alır və komissar olur';
+            break;
         case 'Ölümsüz':
             textMessage = 'Rolun - 🕺 <b>Ölümsüz insan</b>.\nSən Ölümsüzsən. Geceler vurulduqda ölmürsən, yalnız gündüz səs vermədə asıla bilirsən.';
             break;
@@ -543,6 +559,14 @@ async function createTextMessageAction(role, userID, ChatID) {
             const messageData = await app.bot.telegram.sendMessage(
                 userID,
                 'Nə edirik?',
+                { reply_markup: keyboards.checkOrKill(ChatID) }
+            );
+            await dq.updateMessageIDPlayer(ChatID, messageData.message_id, userID);
+            break;
+        case 'Ekizler-1':
+            const messageData = await app.bot.telegram.sendMessage(
+                userID,
+                'Nə edirik he??',
                 { reply_markup: keyboards.checkOrKill(ChatID) }
             );
             await dq.updateMessageIDPlayer(ChatID, messageData.message_id, userID);
@@ -608,6 +632,7 @@ async function ProcessingResultsNight(data, ChatID) {
     data.players.forEach((player, i) => {
         if ((player.lifeStatus && player.role == 'Cin' && player.actID != 0)||
             (player.lifeStatus && player.role == 'Komissar' && player.actID != 0 && !player.copCheck)||
+            (player.lifeStatus && player.role == 'Ekizler-1' && player.actID != 0 && !player.copCheck)||
             (player.lifeStatus && player.role == 'Мanyak' && player.actID != 0)||
             (player.lifeStatus && player.role == 'Zombi' && player.actID != 0)) {
 
@@ -627,6 +652,7 @@ async function ProcessingResultsNight(data, ChatID) {
                 }
             });
         } else if ((player.lifeStatus && player.role == 'Komissar' && player.actID != 0 && player.copCheck)||
+                   (player.lifeStatus && player.role == 'Ekizler-1' && player.actID != 0 && player.copCheck)||
                    (player.lifeStatus && player.role == 'Dəli' && player.actID != 0)||
                    (player.lifeStatus && player.role == 'Ruh' && player.actID != 0)) {
             const actID = player.actID,
@@ -653,6 +679,27 @@ async function ProcessingResultsNight(data, ChatID) {
                             `${player.name} - ${player.role}`);
                     } else if (role == 'Dəli') {
                         if (player.role == 'Komissar' || 
+                            player.role == 'Leytenant'||
+                            player.role == 'Ekizler-1'||
+                            player.role == 'Ekizler-2'|| 
+                            player.role == 'Cin'|| 
+                            player.role == 'Ruh') {
+
+                            app.bot.telegram.sendMessage(
+                                checkingID,
+                                `${player.name} - ${player.role}`);
+                        } else {
+                            app.bot.telegram.sendMessage(
+                                checkingID,
+                                `${player.name} - İnsan`); 
+                    } if (role == 'Ekizler-1') {
+                        app.bot.telegram.sendMessage(
+                            checkingID,
+                            `${player.name} - ${player.role}`);
+                    } else if (role == 'Dəli') {
+                        if (player.role == 'Ekizler-1' ||
+                            player.role == 'Ekizler-2'||
+                            player.role == 'Komissar'|| 
                             player.role == 'Leytenant'|| 
                             player.role == 'Cin'|| 
                             player.role == 'Ruh') {
@@ -664,8 +711,7 @@ async function ProcessingResultsNight(data, ChatID) {
                             app.bot.telegram.sendMessage(
                                 checkingID,
                                 `${player.name} - İnsan`);
-                        }
-                    }
+                    } 
                 }
             });
         }
@@ -750,8 +796,8 @@ async function ProcessingResultsNight(data, ChatID) {
                     if (Math.random() > 0.65){
                         cloneData.players[i].lifeStatus = true;
                         cloneData = updateCounter(cloneData, i, false);
-                        kill -= 3;
-                        Lucky = false;
+                        kill -= 1;
+                        Lucky = true;
                         app.bot.telegram.sendMessage(
                             ChatID,
                             `Bu axşam insanlardan bəzilərinə qismət oldu...`);
@@ -784,6 +830,15 @@ async function ProcessingResultsNight(data, ChatID) {
                                 player.userID,
                                 'Komissar öldü, insanların başçısı sənsən!');
                             cloneData.players[i].role = 'Komissar';
+                        }
+                    });
+                } else if (player.initialRole == 'Ekizler-1') {
+                    cloneData.players.forEach((player, i) => {
+                        if (player.lifeStatus && player.role == 'Ekizler-2') {
+                            app.bot.telegram.sendMessage(
+                                player.userID,
+                                'Ekizler-1 öldü, insanların başçısı sənsən!');
+                            cloneData.players[i].role = 'Ekizler-1';
                         }
                     });
                 } else if (player.initialRole == 'Zombi') {
@@ -964,6 +1019,12 @@ async function sendDayMessageLivePlayers(ChatID, data) {
                 case 'Dəli':
                     masRole[12]=1;
                     break;
+                case 'Ekizler-1':
+                    masRole[13]=1;
+                    break;
+                case 'Ekizler-2':
+                    masRole[14]=1;
+                    break;
             }
         }
     });
@@ -984,6 +1045,8 @@ async function sendDayMessageLivePlayers(ChatID, data) {
     if (masRole[10]==1) { listRoles+=`💃🏻 Məşuqə, `; }
     if (masRole[11]==1) { listRoles+=`🧟‍♀ Zombi, `; }
     if (masRole[12]==1) { listRoles+=`🧘🏻 Dəli, `; }
+    if (masRole[13]==1) { listRoles+=`👯‍♀️ Ekizler-1, `; }
+    if (masRole[14]==1) { listRoles+=`👯‍♀️ Ekizler-2, `; }
     await app.bot.telegram.sendMessage(
         ChatID,
         `<b>🔥Sağ qalan oyunçular:</b>`+listUsers+`\n\n<b>Onlardan:</b>`+listRoles.slice(0, -2)+
