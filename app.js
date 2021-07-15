@@ -2,6 +2,8 @@
 import dotenv from 'dotenv';
 import * as functions from './functions.js';
 import * as game from './game.js';
+import * as dq from './database-queries.js';
+import * as keyboards from './keyboards.js';
 import Telegraf from 'telegraf';
 import rateLimit from 'telegraf-ratelimit';
 dotenv.config();
