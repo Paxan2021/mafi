@@ -72,6 +72,8 @@ bot.command('role', (ctx) => {
 👨🏼‍⚕️ <b>Həkim</b> - sakinləri yaxşılaşdırır, ancaq ardıcıl 2 dəfə bir oyunçunu sağaldırsa və bir dəfəyə vurulmayıbsa, onu ölümünə qədər sağaldır.
 🕵🏼️‍♂️ <b>Komissar</b> - İnsanların başçısı, Cin və Ruhu axtarır, oyunçunu yoxlaya və ya öldürə bilər
 👮🏻 <b>Leytenant</b> - komissar köməkçisi, rəis öldükdə rütbə alır və komissar olur
+👯‍♀️ <b>Ekizler-1</b> - Ekizlerin başçısı, Cin və Ruhu axtarır, oyunçunu yoxlaya və ya öldürə bilər
+👯‍♀️ <b>Ekizler-2</b> - Ekizler-1 köməkçisi, rəis öldükdə rütbə alır və Ekizler-1 olur
 🤦🏼‍♂️ <b>Kamikadze</b> - intiharçıdır, məqsədi günortadan sonra iclasda asılmaqdır
 ✊ <b>Mühafizəçi</b> - işdən tez ayrıldıqda istənilən oyunçunu əhatə edir, ancaq oyunçunu ölümdən qurtarır.
 🔪 <b>Manyak</b> - təkbaşına cinlərlə mübarizə aparmaq istəyir, istənilən sakini öldürə bilər
