@@ -1046,8 +1046,8 @@ async function sendDayMessageLivePlayers(ChatID, data) {
     if (masRole[14]==1) { listRoles+=`🪓 Qisasçı, `; }
     await app.bot.telegram.sendMessage(
         ChatID,
-        `<b>🔥Sağ qalan oyunçular:</b>`+listUsers+`\n\n<b>Onlardan:</b>`+listRoles.slice(0, -2)+
-            `\n👥Cəmi: ${caunter} \n\nİndi gecənin nəticələrini müzakirə etmək vaxtıdır.....\n45 Saniyə sonra səsvermə başlayır`,
+        `<b>🔥Sağ qalan oyunçular:\n</b>`+listUsers+`\n\n<b>Onlardan:\n</b>`+listRoles.slice(0, -2)+
+            `\n\n👥Cəmi: ${caunter} \n\nİndi gecənin nəticələrini müzakirə etmək vaxtıdır.....\n\n45 Saniyə sonra səsvermə başlayır`,
         { parse_mode: 'HTML' }
     );
 }
@@ -1095,6 +1095,7 @@ async function registration(ChatID) {
     }
     await deleteMessageRegistration(ChatID);
 }
+
 
 
 //Отправка сообщения регистрации
