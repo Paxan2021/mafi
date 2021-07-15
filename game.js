@@ -173,6 +173,7 @@ function distributionOfRoles(ChatID, masRoles, masPlayers) {
             allies = 3;
         } else if (masRoles[i] == 'Ekizler-1' || masRoles[i] == 'Ekizler-2') {
             allies = 4;
+        }
         dq.addRolePlayer(ChatID, item.userID, masRoles[i], allies);
     });
 }
@@ -692,6 +693,7 @@ async function ProcessingResultsNight(data, ChatID) {
                             app.bot.telegram.sendMessage(
                                 checkingID,
                                 `${player.name} - İnsan`); 
+                    }
                     } if (role == 'Ekizler-1') {
                         app.bot.telegram.sendMessage(
                             checkingID,
@@ -711,7 +713,8 @@ async function ProcessingResultsNight(data, ChatID) {
                             app.bot.telegram.sendMessage(
                                 checkingID,
                                 `${player.name} - İnsan`);
-                    } 
+                        }  
+                    }
                 }
             });
         }
