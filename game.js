@@ -112,7 +112,7 @@ async function creatingRoles(chatID, counter) {
         counterWorld = 2;
         counterMafia = 1;
     } else if (counter <7) {
-        masRoles = ['Cin', 'Həkim', 'Komissar', 'Ölümsüz', 'Ekizler-1'];//2
+        masRoles = ['Cin', 'Həkim', 'Komissar', 'Ekizler-1', 'Ekizler-2'];//2
         counterWorld = 3;
     } else if (counter <9) {
         masRoles = ['Cin', 'Ruh', 'Həkim', 'Komissar', 'Ekizler-1', 'Ölümsüz', 'Kamikadze'];//3
