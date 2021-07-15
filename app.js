@@ -66,7 +66,7 @@ bot.command('game', async (ctx) => {
 
 
 bot.command('/strt', (ctx) => {
-  await dq.updateDataStartGame(ChatID, Date.now());
+  dq.updateDataStartGame(ChatID, Date.now());
 });
 
 //Запускаем игру
