@@ -565,13 +565,8 @@ async function createTextMessageAction(role, userID, ChatID) {
             await dq.updateMessageIDPlayer(ChatID, messageData.message_id, userID);
             break;
         case 'Ekizler-1':
-            const messageData = await app.bot.telegram.sendMessage(
-                userID,
-                'Nə edirik?',
-                { reply_markup: keyboards.checkOrKill(ChatID) }
-            );
-            await dq.updateMessageIDPlayer(ChatID, messageData.message_id, userID);
-            break;
+            textMessage = 'Nə edirik?';
+            break
         case 'Mühafizəçi':
             textMessage = 'Bu gecə kimləri qoruyacağıq?';
             break;
