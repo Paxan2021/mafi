@@ -47,11 +47,11 @@ export function buttonActionsNight(ChatID, players, userID, allies) {
     players.forEach((player) => {
         if(player.lifeStatus) {
             if (player.userID == userID && (player.role != 'Komissar'||
+                                            player.role != 'Ekizler-1'||
                                             player.role != 'Mühafizəçi'||
                                             player.role != 'Manyak'||
-                                            player.role != 'Iblis'||
                                             player.role != 'Məşuqə'||
-                                            player.role != 'Dəli')) {
+                                            player.role != 'Dəli')) { 
                 keyboard.push(Markup.callbackButton('☑️ '+player.name, `act ${ChatID} ${player.userID}`));
             } else {
                 if (allies!=0 && player.allies==allies) {
