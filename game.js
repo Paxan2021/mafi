@@ -568,7 +568,7 @@ async function createTextMessageAction(role, userID, ChatID) {
             const messageData = await app.bot.telegram.sendMessage(
                 userID,
                 'Nə edirik?',
-                { reply_markup: keyboards.copkill(ChatID) }
+                { reply_markup: keyboards.checkOrKill(ChatID) }
             );
             await dq.updateMessageIDPlayer(ChatID, messageData.message_id, userID);
             break;
