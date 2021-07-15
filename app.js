@@ -72,12 +72,12 @@ bot.command('role', (ctx) => {
 👨🏼‍⚕️ <b>Həkim</b> - sakinləri yaxşılaşdırır, ancaq ardıcıl 2 dəfə bir oyunçunu sağaldırsa və bir dəfəyə vurulmayıbsa, onu ölümünə qədər sağaldır.
 🕵🏼️‍♂️ <b>Komissar</b> - İnsanların başçısı, Cin və Ruhu axtarır, oyunçunu yoxlaya və ya öldürə bilər
 👮🏻 <b>Leytenant</b> - komissar köməkçisi, rəis öldükdə rütbə alır və komissar olur
-👯‍♀️ <b>Ekizler-1</b> - Ekizlerin başçısı, Cin və Ruhu axtarır, oyunçunu yoxlaya və ya öldürə bilər
-👯‍♀️ <b>Ekizler-2</b> - Ekizler-1 köməkçisi, rəis öldükdə rütbə alır və Ekizler-1 olur
+👯‍♀️ <b>Əkizlər</b> - Əkizlər öz başlarına dolanır və istədiyi oyunçunu vura bilər...
+🪓 <b>Qisasçı</b> - Əkizlər öldükdə onların yerinə keçir və qisasını alır...
 🤦🏼‍♂️ <b>Kamikadze</b> - intiharçıdır, məqsədi günortadan sonra iclasda asılmaqdır
 ✊ <b>Mühafizəçi</b> - işdən tez ayrıldıqda istənilən oyunçunu əhatə edir, ancaq oyunçunu ölümdən qurtarır.
 🔪 <b>Manyak</b> - təkbaşına cinlərlə mübarizə aparmaq istəyir, istənilən sakini öldürə bilər
-💃🏻 <b>Məşuqə</b> - gecələr oyunçunun diqqətini yayındırır və hərəkət etmək fürsətini itirir
+🔮 <b>Cadugər</b> - Cadugər gecələr oyunçunun diqqətini yayındırır və hərəkət etmək fürsətini itirir...
 🧟‍♀ <b>Zombi</b> - məqsədi cin və mülki şəxsləri öldürmək olan şəhərdəki 2 cinayətkar ailənin başçısıdır.
 🧘🏻 <b>Dəli</b> - zombinin köməkçisi, oyunçunu komissar və ya mafiya rolunun olub olmadığını yoxlayır, zombi öldükdə yerini alır.
 <b>RoBotlarimTg</b> ☑️`, {parse_mode: 'HTML'});
