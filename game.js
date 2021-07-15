@@ -1047,7 +1047,7 @@ async function sendDayMessageLivePlayers(ChatID, data) {
     await app.bot.telegram.sendMessage(
         ChatID,
         `<b>🔥Sağ qalan oyunçular:\n</b>`+listUsers+`\n\n<b>Onlardan:\n\n</b>`+listRoles.slice(0, -2)+
-            `\n\n👥Cəmi: ${caunter} \n\nİndi gecənin nəticələrini müzakirə etmək vaxtıdır.....\n\n45 Saniyə sonra səsvermə başlayır`,
+            `\n\n👥Cəmi: ${caunter} nəfər \n\nİndi gecənin nəticələrini müzakirə etmək vaxtıdır.....\n\n45 Saniyə sonra səsvermə başlayır`,
         { parse_mode: 'HTML' }
     );
 }
