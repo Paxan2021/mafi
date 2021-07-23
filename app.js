@@ -67,11 +67,9 @@ bot.command('game', async (ctx) => {
 
 //Strt
 bot.command('strt', (ctx) => {
-  if (await functions.checkStartGame(ctx.message.chat.id)) {
-    await functions.updateOrAddChatInBD(ctx.message.chat.id, ctx.message.chat.title);
-    game.launch(ctx.message.chat.id);
-} else {
-  ctx.reply('Oyun Basladi.');
+  await functions.checkStartGame(ctx.message.chat.id) {
+  await functions.updateOrAddChatInBD(ctx.message.chat.id, ctx.message.chat.title);
+  game.launch(ctx.message.chat.id);
 }
 });
 
