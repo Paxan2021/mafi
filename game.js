@@ -1087,7 +1087,7 @@ function convertTimeToText(time) {
 async function registration(ChatID) {
     for (let i = 10; i > 0; i -= 3) {
         await sendMessageRegistration(ChatID, i);
-        await delay(30000);
+        await delay(3000);
         const data = await dq.getDataDeleteMessageRegistration(ChatID);
         if (data.messageID == 0){
             break;
