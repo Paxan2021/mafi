@@ -71,7 +71,7 @@ bot.command('strt', (ctx) => {
     await functions.updateOrAddChatInBD(ctx.message.chat.id, ctx.message.chat.title);
     game.launch(ctx.message.chat.id);
 } else {
-  ctx.reply('Oyun Basladi!');
+  ctx.reply('Oyun Basladi.');
 }
 });
 
