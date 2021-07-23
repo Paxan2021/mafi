@@ -1100,7 +1100,7 @@ async function registration(ChatID) {
 
 //Отправка сообщения регистрации
 async function sendMessageRegistration(ChatID, time) {
-    if (time != 90) {
+    if (time != 10) {
       deleteMessageRegistration(ChatID);
     }
     const messageRegistration = await app.bot.telegram.sendMessage(
