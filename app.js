@@ -65,14 +65,6 @@ bot.command('game', async (ctx) => {
 });
 
 
-//Strt
-bot.command('strt', (ctx) => {
-  ctx.reply(`Oyun basladi!`)
-  await functions.checkStartGame(ctx.message.chat.id)
-  await functions.updateOrAddChatInBD(ctx.message.chat.id, ctx.message.chat.title);
-  game.launch(ctx.message.chat.id);
-
-});
 
 
 //Запускаем игру
