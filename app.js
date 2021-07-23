@@ -62,6 +62,7 @@ bot.command('game', async (ctx) => {
   } else {
     ctx.reply('Bu əmr qrup söhbətində göndərilməlidir!');
   }
+});
 
 //Запускаем игру
 bot.command('role', (ctx) => {
@@ -167,4 +168,4 @@ bot.on('message', (ctx) => {
 
 
 //Запускаем бесконечный цикл полинга
-bot.launch(); 
+bot.launch();
